@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HometaskComponent } from './hometask.component';
+import { HometaskComponent } from './home-task.component';
 
 describe('HometaskComponent', () => {
   let component: HometaskComponent;

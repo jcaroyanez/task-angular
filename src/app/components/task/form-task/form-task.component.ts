@@ -120,7 +120,6 @@ export class FormTaskComponent {
 	}
 
 	onSubmit() {
-		console.log('hello');
 		if(!this.taskForm.get('task')?.valid) {
 			this.taskForm.get('task')?.markAllAsTouched();
 			return
@@ -139,5 +138,8 @@ export class FormTaskComponent {
 		}
 
 		this.onSave.emit(taks);
+		this.taskForm.get('person')?.reset();
+		this.taskForm.get('task')?.reset();
+		this.persons = [];
 	}
 }
