@@ -1,6 +1,8 @@
 @import "variables";
 
 .container {
-	background-color: red;
+	margin: 30px auto 0 auto;
 	max-width: $xl;
+	display: flex;
+	justify-content: center;
 }

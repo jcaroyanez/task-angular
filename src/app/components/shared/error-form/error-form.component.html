@@ -1,0 +1,7 @@
+<ng-container *ngIf="_control.touched && _control?.errors as errors">
+	<div class="content-error">
+		<span *ngIf="errors['required']">*Este campo es requerido</span>
+		<span *ngIf="errors['minlength']">*La longitud mínima requerida es {{ errors['minlength'].requiredLength }}.</span>
+		<span *ngIf="errors['min']">*Valor minimo requerido es {{ errors['min'].min }}.</span>
+	</div>
+</ng-container>

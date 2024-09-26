@@ -1,0 +1,75 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="task">
+		<div class="cotent-input">
+			<label>Nombre de la tarea: </label>
+			<input formControlName="nameTask" />
+		</div>
+		
+		<app-error-form [control]="taskForm.get('task.nameTask')!" />
+	
+		<div class="cotent-input">
+			<label>Fecha limite: </label>
+			<input type="date"  formControlName="dateTask"/>
+		</div>
+	</div>
+
+	<app-error-form [control]="taskForm.get('task.dateTask')!" />
+
+  <h2>Personas Asociadas:</h2>
+
+	<div formGroupName="person">
+		<div class="cotent-input">
+			<label>Nombre completo</label>
+			<input formControlName="namePerson" />
+		</div>
+
+		<app-error-form [control]="taskForm.get('person.namePerson')!" />
+	
+		<div class="cotent-input">
+			<label>Edad</label>
+			<input formControlName="age" />
+		</div>
+
+		<app-error-form [control]="taskForm.get('person.age')!" />
+	
+		<h3>Habilidades:</h3>
+
+		<div>
+			<mat-form-field class="content-chips">
+				<mat-label>Ingrese sus Habilidades</mat-label>
+				<mat-chip-grid #chipGrid aria-label="Ingrese sus Habilidades">
+					<mat-chip-row
+						*ngFor="let skill of skills"
+						(removed)="remove(skill)"
+						[editable]="true"
+						(edited)="edit(skill, $event)"
+						[aria-description]="'press enter to edit ' + skill"
+					>
+						{{ skill }}
+						<button matChipRemove [attr.aria-label]="'remove ' + skill">
+							<mat-icon>cancel</mat-icon>
+						</button>
+					</mat-chip-row>
+					<input
+						[matChipInputFor]="chipGrid"
+						[matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+						[matChipInputAddOnBlur]="addOnBlur"
+						(matChipInputTokenEnd)="add($event)"
+						formControlName="skill"
+					/>
+				</mat-chip-grid>
+			</mat-form-field>
+		
+			<app-error-form [control]="taskForm.get('person.skill')!" />
+
+			<button mat-stroked-button color="primary" (click)="sendPerson($event)">Añadir persona</button>
+			<h3>Personas agregadas:</h3>
+	
+			<app-list-skill [persons]="persons" (onDelete)="deletePerson($event)"/>
+		</div>
+	</div>
+	
+	<div class="button-save">
+		<button mat-raised-button color="primary">Guardar tarea</button>
+	</div>
+</form>

@@ -8,7 +8,7 @@ import { ContainerComponent } from './components/shared/container/container.comp
   styleUrls: ['./app.component.scss'],
 	imports: [
 		RouterOutlet, 
-		ContainerComponent
+		ContainerComponent,
 	],
 	standalone: true,
 })

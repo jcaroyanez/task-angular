@@ -1,0 +1,39 @@
+form {
+	width: 350px;
+}
+
+input {
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #b7b7b7;
+	outline-color: #3f51b5;
+}
+
+.cotent-input {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h2 {
+	margin-top: 30px;
+}
+
+h3 {
+	margin-top: 15px;
+}
+
+.content-chips {
+	width: 100%;
+}
+
+.button-save {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
