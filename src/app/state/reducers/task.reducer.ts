@@ -8,6 +8,5 @@ export const initialState: TaskState = {
 
 export const taskReducer = createReducer(
 	initialState,
-	//on(createTask, (state, { task }) => ({ ...state, tasks: [...state.tasks, { ...task }] }))
 	on(setAllTask, (state, { tasks }) => ({ ...state, tasks: [...tasks] }))
 )
