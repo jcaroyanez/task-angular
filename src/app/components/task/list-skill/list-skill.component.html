@@ -4,7 +4,7 @@
       <p class="title">{{ person.name }} ({{ person.age }})</p>
       <p>Habilidades - {{ person.skill.join(", ") }}</p>
     </div>
-		<button mat-mini-fab color="primary" aria-label="delete person" (click)="deletePerson(person.id)">
+		<button mat-mini-fab color="primary" aria-label="delete person" (click)="deletePerson($event, person.id)">
 			<mat-icon>delete</mat-icon>
 		</button>
   </div>

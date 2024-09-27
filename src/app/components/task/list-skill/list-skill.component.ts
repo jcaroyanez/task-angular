@@ -19,7 +19,8 @@ export class ListSkillComponent {
 	@Input() persons!: Person[];
 	@Output() onDelete = new EventEmitter<string>();
 
-	deletePerson(id: string) {
+	deletePerson(event: Event, id: string) {
+		event.preventDefault();
 		this.onDelete.emit(id);
 	}
 
