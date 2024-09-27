@@ -2,5 +2,21 @@
 
 .container {
 	margin: 30px auto 0 auto;
-	max-width: $xl;
+	max-width: $xs;
+
+	@media (min-width: $lg) {
+		max-width: $xl;
+	}
+
+	@media (min-width: $md) {
+		max-width: $lg;
+	}
+
+	@media (min-width: $sm) {
+		max-width: $md;
+	}
+
+	@media (min-width: $xs) {
+		max-width: $sm;
+	}
 }

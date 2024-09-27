@@ -1,5 +1,11 @@
+@import "variables";
+
 form {
-	width: 350px;
+	width: 320px;
+
+	@media (min-width: $sm) {
+		width: 350px;
+	}
 }
 
 input {

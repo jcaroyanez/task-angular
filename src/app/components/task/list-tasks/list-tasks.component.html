@@ -1,4 +1,5 @@
 <div>
+	<p *ngIf="!tasks.length" class="message">No hay tareas</p>
   <div class="item" *ngFor="let task of tasks; let i = index">
     <div class="header">
 			<div class="status">
