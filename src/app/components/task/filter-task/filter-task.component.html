@@ -1,0 +1,5 @@
+<div class="content">
+  <button mat-raised-button [color]="getColorStatus(FilterStatus.all)" (click)="setStatus(FilterStatus.all)">Todas</button>
+  <button mat-raised-button [color]="getColorStatus(FilterStatus.completed)" (click)="setStatus(FilterStatus.completed)">Completadas</button>
+  <button mat-raised-button [color]="getColorStatus(FilterStatus.pending)" (click)="setStatus(FilterStatus.pending)">Pendiente</button>
+</div>

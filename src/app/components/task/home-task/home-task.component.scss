@@ -3,3 +3,14 @@
 	display: flex;
 	justify-content: flex-end;
 }
+
+.content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.filters {
+	display: flex;
+	gap: 20px;
+}

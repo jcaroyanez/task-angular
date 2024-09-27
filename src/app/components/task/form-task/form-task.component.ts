@@ -134,7 +134,8 @@ export class FormTaskComponent {
 		const taks: Task = {
 			name: this.taskForm.get('task.nameTask')?.value,
 			date: this.taskForm.get('task.dateTask')?.value,
-			persons: this.persons
+			persons: this.persons,
+			status: false,
 		}
 
 		this.onSave.emit(taks);

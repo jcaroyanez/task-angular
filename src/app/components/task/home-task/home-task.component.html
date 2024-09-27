@@ -1,3 +1,11 @@
 <div class="content-btn">
 	<a mat-raised-button color="primary" routerLink="/created-task">Crear tarea</a>
 </div>
+<div class="content">
+	<h1>Listado de tareas</h1>
+	<div class="filters">
+		<h1>Filtros</h1>
+		<app-filter-task (onChange)="onChangeFilter($event)" />
+	</div>
+	<app-list-tasks (onChangeTask)="onChageStatusTask($event)" [tasks]="listTasks"/>
+</div>
